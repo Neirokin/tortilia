@@ -14,7 +14,6 @@ XHR.open('GET', './scripts/json/products.json');
 XHR.responseType = 'json';
 XHR.send();
 XHR.onload = function(){
-	debugger
 	let products = XHR.response.cakes;
 	products.forEach(product => {
 		if(sessionStorage.glProductName == product.name){
