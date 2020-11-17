@@ -5,7 +5,7 @@ let cartContainer = doc.getElementById('cartContainer');
 let selectedProducts = JSON.parse(sessionStorage.getItem('selectedProducts'));
 let cartTitle = doc.getElementById('cartTitle');
 var XHR = new XMLHttpRequest();
-XHR.open('GET', 'http://localhost:3000/cakes');
+XHR.open('GET', 'json/products.json');
 XHR.responseType = 'json';
 XHR.send();
 XHR.onload = function(){
