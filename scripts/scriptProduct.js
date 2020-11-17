@@ -10,6 +10,7 @@ productTitle[0].textContent = sessionStorage.getItem('glProductName');
 pageTitle.textContent = sessionStorage.getItem('glProductName');
 
 var XHR = new XMLHttpRequest();
+debugger
 XHR.open('GET', './json/products.json');
 XHR.responseType = 'json';
 XHR.send();
