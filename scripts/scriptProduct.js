@@ -15,7 +15,7 @@ XHR.responseType = 'json';
 XHR.send();
 XHR.onload = function(){
 	debugger
-	let products = XHR.response;
+	let products = XHR.response.cakes;
 	products.forEach(product => {
 		if(sessionStorage.glProductName == product.name){
 			glProductPrice = product.price;
