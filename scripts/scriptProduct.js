@@ -10,11 +10,11 @@ productTitle[0].textContent = sessionStorage.getItem('glProductName');
 pageTitle.textContent = sessionStorage.getItem('glProductName');
 
 var XHR = new XMLHttpRequest();
-debugger
 XHR.open('GET', './json/products.json');
 XHR.responseType = 'json';
 XHR.send();
 XHR.onload = function(){
+	debugger
 	let products = XHR.response;
 	products.forEach(product => {
 		if(sessionStorage.glProductName == product.name){
