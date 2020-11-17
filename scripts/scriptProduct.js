@@ -10,7 +10,7 @@ productTitle[0].textContent = sessionStorage.getItem('glProductName');
 pageTitle.textContent = sessionStorage.getItem('glProductName');
 
 var XHR = new XMLHttpRequest();
-XHR.open('GET', 'http://localhost:3000/cakes');
+XHR.open('GET', './json/products.json');
 XHR.responseType = 'json';
 XHR.send();
 XHR.onload = function(){
