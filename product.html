@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title id="title">Товар</title>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--Font Awesome -->
+	<script src="https://kit.fontawesome.com/22763864af.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<header class="container-fluid px-0">
+		<nav class="navbar navbar-expand-sm">
+			<a class="navbar-brand" href="index.html">
+				<img src="img/turtle_logo2.png" class="img-brand"> ТОРТИЛЛЬЯ
+			</a>
+			<ul class="navbar-nav justify-content-end w-100">
+				<li class="nav-item"><a class="btn turtle-btn" href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container">
+		<div class="row">
+			<div class="col-3 to-main-button shadow-sm">
+				<a href="index.html" class="stretched-link">На главную</a>
+			</div>
+		</div>
+		<div class="row justify-content-end product-info">
+			<div class="col shadow">
+				<h2 class="product-info-title text-center shadow-sm"></h2>
+				<div class="row">
+					<div class="col">
+						<p class="my-0 d-inline">О торте:</p>
+						<p class="d-inline product-info-wrapper">Цена: <span id="productPrice">220$</span></p>
+						<p id="productInfo" class="mt-5"></p>
+					</div>
+				</div>
+				
+
+			</div>
+			<div class="col-6 my-3 product-title">
+				<img id="productImg" src="" class ="shadow">
+			</div>
+			<div class="col-12">
+				<p id="productDescription" class="product-review"></p>
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<hr class="m-0" />	
+					</div>			
+					<div class="col-6 text-center product-buttons shadow-sm">
+						<button class="btn stretched-link" data-toggle="modal" data-target="#modalWindow">Купить</button>
+					</div>
+					<div id="addToCartBtn" class="col-6 text-center product-buttons shadow-sm">
+						<button id="addToCart" class="btn stretched-link">В корзину</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</main>
+
+	<div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-labelledby="modalBody" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content modal-window">
+				<div class="modal-header shadow-sm">
+				  <h5 class="modal-title" id="modalWindow">Укажите ваши данные</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+						<div class="col shadow-sm pb-4">
+								<form action="">
+									<div class="form-group shadow p-2">
+										<label for="exampleFormControlInput1">Email</label>
+										<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+									</div>
+									<div class="form-group shadow p-2">
+										<label for="exampleFormControlInput1">Номер телефона</label>
+										<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="8-952-000-15-15">
+									</div>
+									<div class="form-group shadow p-2">
+										<label for="exampleFormControlInput1">Улица</label>
+										<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+									</div>
+									<div class="form-group shadow p-2">
+										<label for="exampleFormControlInput1">Дом</label>
+										<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+									</div>
+									<div class="form-group shadow p-2">
+										<label for="exampleFormControlInput1">Квартира</label>
+										<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+									</div>
+									<div class="col product-buttons justify-self-center text-center shadow-sm">
+										<button type="submit" class="btn turtle-btn" data-dismiss="modal">Отправить</button>
+									</div>
+								</form>
+							</div>
+				</div>
+				<div class="modal-footer"></div>
+			  </div>
+			</div>
+		  </div>
+
+		  <footer class="container-fluid px-0 product-footer">
+			<nav class="navbar navbar-expand-sm">
+				<ul class="navbar-nav justify-content-start w-100">
+					<li class="nav-item">&copyРазработано TURTLE.inc</li>
+					<li class="nav-item footer-links">Мы в соц.сетях &nbsp&nbsp<a href="#"><i class="fab fa-vk"></i></a> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				</ul>
+			</nav>
+		</footer>
+
+		<!--Bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="scripts/scriptProduct.js"></script>
+</body>
+</html>
