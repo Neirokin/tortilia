@@ -5,11 +5,11 @@ let cartContainer = doc.getElementById('cartContainer');
 let selectedProducts = JSON.parse(sessionStorage.getItem('selectedProducts'));
 let cartTitle = doc.getElementById('cartTitle');
 var XHR = new XMLHttpRequest();
-XHR.open('GET', 'json/products.json');
+XHR.open('GET', './scripts/json/products.json');
 XHR.responseType = 'json';
 XHR.send();
 XHR.onload = function(){
-	let products = XHR.response;
+	let products = XHR.response.cakes;
 	for(let i = 0; i < selectedProducts.length; i++){
 		products.forEach(product => {
 			if(selectedProducts[i].name == product.name){
